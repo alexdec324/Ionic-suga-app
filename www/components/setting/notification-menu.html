@@ -1,0 +1,25 @@
+<ion-view>
+	<ion-nav-title>
+		<h1 class="title">
+			<span>notifications menu</span>
+		</h1>
+	</ion-nav-title>
+	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px" />
+		</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-list>
+			<ion-toggle>post likes</ion-toggle>
+			<ion-toggle ng-checked="true">post comments</ion-toggle>
+			<ion-toggle ng-checked="true">post replays</ion-toggle>
+			<ion-toggle ng-checked="true">post followers</ion-toggle>
+			<ion-toggle ng-checked="true">new followers</ion-toggle>
+			<ion-toggle ng-checked="true">sugapic owner</ion-toggle>
+			<ion-toggle ng-checked="true">secret reaveled</ion-toggle>
+			<ion-toggle ng-checked="true">chat message</ion-toggle>
+			<ion-toggle ng-checked="true">feature approved</ion-toggle>
+		</ion-list>
+	</ion-content>
+</ion-view>

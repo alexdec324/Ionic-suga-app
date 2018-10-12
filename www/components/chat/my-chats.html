@@ -1,0 +1,66 @@
+<ion-view title="My chats">
+	<ion-nav-title>
+		<h1 class="title">
+			<span>My chats</span>
+			<img class="chat-logo" src="img/my-chats-banner.png" />&nbsp;
+		</h1>
+	</ion-nav-title>
+	<!-- <ion-nav-buttons side="right">
+		<img src="img/search.png" style="margin-right: 20px; width: 33px" ng-click="openSearch()" />
+		<img src="img/menu.png" style="width: 15px" ng-click="openSetting()"/>
+	</ion-nav-buttons> -->
+	<div class="bar bar-subheader item-input-inset">
+	  <label class="item-input-wrapper" style="border-radius: 15px; box-shadow: inset grey 1px 1px 1px 1px;">
+	    <i class="icon ion-ios-search placeholder-icon"></i>
+	    <input type="search" ng-model="query" ng-keyup="searchMessages()" placeholder="Search...">
+	  </label>
+	</div>
+	<ion-content class="has-subheader">
+		<ion-list>
+			<!-- <ion-item style="margin-top: 20px; padding: 0px; border-style: none">
+				<div class="row text-center" style="padding: 0px">
+					<div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px; background-color: #ddd;"></div>
+					<div class="col col-20" style="font-size: 12px; font-weight: bold; padding-left: 0px;padding-right: 0px; max-width: 15%">Billy.Boy</div>
+					<div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px; background-color: #ddd;"></div>
+				</div>
+				<div class="row" style="padding: 0px">
+					<div class="col col-10">
+						<img src="img/user-avatar01.png" style="width: 35px" />
+					</div>
+					<div class="col col-75" style="padding-left: 10px">
+						<p style="font-size: 12px">well its wasnt like that. I dont hear you when <br/> you are so far away...:-)</p>
+					</div>
+					<div class="col col-10"></div>
+				</div>
+				<div class="row text-right" style="padding: 0px">
+					<div class="col" style="padding: 0px; padding-right: 10px; font-size: 10px">
+						seen 1d ago
+					</div>
+				</div>
+			</ion-item> -->
+			<ion-item ng-repeat="msg in all_msgs" ng-click="openConversation({{msg.user_id}})" style="margin-top: 20px; padding: 0px; border-style: none">
+				<div class="row text-center" style="padding: 0px">
+					<div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px; background-color: #ddd;"></div>
+					<div class="col col-20" style="font-size: 12px; font-weight: bold; padding-left: 0px;padding-right: 0px; max-width: 15%">{{msg.username}}</div>
+					<div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px; background-color: #ddd;"></div>
+				</div>
+				<div class="row" style="padding: 0px">
+					<div class="col col-10">
+						<img src="{{img_url + msg.avatar}}" style="width: 35px" />
+					</div>
+					<div class="col col-75" style="padding-left: 10px">
+						<p style="font-size: 12px">{{msg.last_massage}}</p>
+					</div>
+					<div ng-if="msg.seen_at==null" class="col col-10 text-center" style="margin-top: -33px">
+						<i class="icon ion-ios-chatbubble" style="color: #fc4f3d; font-size: 30px"></i>
+					</div>
+				</div>
+				<div ng-if="msg.seen_at!=null" class="row text-right" style="padding: 0px">
+					<div class="col" style="padding: 0px; padding-right: 10px; font-size: 10px">
+						seen {{dateDiff(msg.seen_at)}} ago
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

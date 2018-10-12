@@ -1,0 +1,40 @@
+<ion-view class="savedfeatures-page">
+	<ion-nav-title>
+		<h1 class="title">
+			<span>Saved <strong>Features</strong></span>
+		</h1>
+	</ion-nav-title>
+	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px" />
+		</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-list>
+			<ion-item class="row">
+				<div class="col col-20" style="max-width: 15%">
+					<img src="img/user-avatar01.png" width="40" height="40">
+				</div>
+				<div class="col col-50" style="max-width: 60%">
+					<div class="text-right">you won a <strong class="feature-lbl">Feature</strong> at <span style="font-size: 12px;font-weight:bold;">Marina Blumberg</span></div>
+					<div class="text-right follwers-lbl">16.4k Followers <span style="color: #bcbcbc;">22/04/2018</span></div>
+				</div>
+				<div class="col col-33 text-right" style="max-width: 25%">
+					<span class="feature-now-btn" ng-click="onFeatureNow(1)">Feature now</span>
+				</div>
+			</ion-item>
+			<ion-item class="row">
+				<div class="col col-20" style="max-width: 15%">
+					<img src="img/avatar02.png" width="40" height="40">
+				</div>
+				<div class="col col-50" style="max-width: 60%">
+					<div class="text-right">you won a <strong class="feature-lbl">Feature</strong> at <span style="font-size: 12px;font-weight:bold;">Clodia van halen</span></div>
+					<div class="text-right follwers-lbl">22.3k Followers <span style="color: #bcbcbc;">22/04/2018</span></div>
+				</div>
+				<div class="col col-33 text-right" style="max-width: 25%">
+					<span class="feature-now-btn" ng-click="onFeatureNow(2)">Feature now</span>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

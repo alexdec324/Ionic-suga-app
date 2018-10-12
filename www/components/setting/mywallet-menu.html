@@ -1,0 +1,73 @@
+<ion-view>
+  	<ion-nav-title>
+    	<h1 class="title">
+      		<span><strong>my wallet</strong> menu</span>
+    	</h1>
+  	</ion-nav-title>
+  	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px" />
+		</button>
+  	</ion-nav-buttons>
+	<ion-content>
+		<div class="row text-center" style="padding-left: 0px; padding-right: 0px">
+			<div class="col col-50" style="background-color: #f7f7f7;">
+				<div>my coins</div>
+				<div style="font-size: 35px">815<img src="img/coin.png" style="height: 30px" /></div>
+			</div>
+			<div class="col col-50" style="background-color: #f6f3d7;">
+				<div>my earnings</div>
+				<div style="font-size: 35px">342<img src="img/card.png" style="height: 30px" /></div>
+				<div style="padding-left: 60px; font-size: 12px;">sugabills</div>
+			</div>
+		</div>
+		<div class="row text-center" style="padding: 0px;">
+			<div class="col col-25" style="border-radius: 10px; background-color: #87c072; margin: 5px; color: white;
+    padding: 0px; box-shadow: #c3c3c3 1px 1px 1px 1px; font-weight: bold;">
+				<div style="padding-top: 5px; padding-bottom: 5px">
+					<div style="border-bottom: 1px solid">Daily</div>
+					<div style="height: 10px"></div>
+					<div>12</div>
+					<img src="img/card.png" style="height: 30px;opacity: 0.2;" />
+				</div>
+			</div>
+			<div class="col col-30" style="border-radius: 10px; background-color: #c6c75d; margin: 5px; color: white;
+    padding: 0px; box-shadow: #c3c3c3 1px 1px 1px 1px; font-weight: bold; margin-left: 25px; margin-right: 25px;">
+				<div>
+					<div style="padding-top: 5px; padding-bottom: 5px">
+						<div style="border-bottom: 1px solid">Weekly</div>
+						<div style="height: 10px"></div>
+						<div>20</div>
+						<img src="img/card.png" style="height: 30px;opacity: 0.2;" />
+					</div>
+				</div>
+			</div>
+			<div class="col col-10" style="background-color: #569ce4; max-width: 5%">
+			</div>
+			<div class="col col-25" style="border-radius: 10px; background-color: #c76d5d; margin: 5px; color: white;
+    padding: 0px; box-shadow: #c3c3c3 1px 1px 1px 1px; font-weight: bold">
+				<div style="padding-top: 5px; padding-bottom: 5px">
+					<div style="border-bottom: 1px solid">Monthly</div>
+					<div style="height: 10px"></div>
+					<div>52</div>
+					<img src="img/card.png" style="height: 30px;opacity: 0.2;" />
+				</div>
+			</div>
+		</div>
+		<ion-list>
+		    <ion-item class="item item-icon-right">
+		    	cash out&nbsp;<img src="img/paypal.png" style="width: 70px" />
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		    <ion-item class="item item-icon-right">
+		    	add coins&nbsp;<img src="img/coins.png" style="width: 20px" />
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		    <ion-item class="item item-icon-right">
+		    	my assets
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		    <ion-toggle style="font-size: 13px;">full statistics</ion-toggle>
+		</ion-list>
+	</ion-content>
+</ion-view>

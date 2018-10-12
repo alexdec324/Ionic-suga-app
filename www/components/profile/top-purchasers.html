@@ -1,0 +1,24 @@
+<ion-view class="toppurchasers-page" title="Top Purchasers">
+	<ion-nav-title>
+		<h1 class="title">
+			<span>{{user.username}}'s Top Purchasers</span>
+			<img class="purchasers-logo" src="img/purchasers-logo.png" />&nbsp;
+		</h1>
+	</ion-nav-title>
+	<ion-content>
+		<ion-list>
+			<ion-item class="row" ng-repeat="(index, item) in top_purchasers">
+				<div class="col text-center avatar-wrap">
+					<span class="badge yellow">{{item.piece_num}}</span>
+					<img src="img/gifter.png" alt="" width="50" height="50">
+				</div>
+				<div class="col col-80" style="display: table; height: 80px; padding-left: 10px;">
+					<div class="description-wrap">
+						<span style="font-size: 13px;">{{item.user_name}}</span> purchased sugapics worth <span style="font-size:15px;">{{item.total_coins}}</span>
+						<span style="font-size: 13px;color:#e7b821;">coins</span>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

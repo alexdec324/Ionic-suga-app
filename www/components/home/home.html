@@ -1,0 +1,339 @@
+<ion-view class="home-page" title="Sugachic">
+  <ion-nav-title>
+    <h1 class="title">
+      <img class="title-image" />
+    </h1>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+  	<div ng-if="scroll == false" style="text-align: center; width: 60px">
+	  	<div style="margin-bottom: -5px">
+	  		<img src="img/feature-avatar.png" style="width: 45px" />
+	  	</div>
+	  	<div class="feature-btn">Feature</div>
+	  	<div style="margin-bottom: -5px; margin-left: 2px;">
+				<span ng-click="onClickFeatureView()" style="display: block;">
+					<img ng-if="feature_view == false" src="img/switch.png" style="width: 55px; vertical-align: middle;" />
+					<img ng-if="feature_view == true" src="img/switch-on.png" style="width: 55px; vertical-align: middle;" />
+				</span>
+	  	</div>
+		</div>
+		<div ng-if="scroll == true" style="display: flex;margin-right: 5px;">
+			<span style="background-color: #252525; color: white; font-weight: bold; height: 20px; font-size: 11px;
+			vertical-align: middle; padding: 0px 12px 0px 12px; border-radius: 13px; margin-top: 8px;">Feature</span>
+			<span>
+				<img ng-if="feature_view == false" src="img/switch.png" style="width: 50px; height: 22px; vertical-align: middle; margin-top: 8px;" />
+				<img ng-if="feature_view == true" src="img/switch-on.png" style="width: 50px; height: 22px; vertical-align: middle; margin-top: 8px;" />
+			</span>
+		</div>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+		<img src="img/wallet.png" class="wallet-btn" ng-click="openTotalCoins()"/>
+		<img src="img/search.png" class="show-search" ng-click="openSearch()"/>
+		<img src="img/menu.png" class="show-menu" ng-click="openSetting()"/>
+  </ion-nav-buttons>
+  <ion-content on-scroll="onScroll()">
+		<!-- Scratch shape -->
+		<div ng-if="scroll == false" class="text-right scratch-shapes" ng-class="{enabled: feature_view}">
+			<span class="shape-item" ng-repeat="shape in shapes track by $index">
+				<img ng-src="{{shape.src}}" class="shape" index="{{$index}}" ng-click="onScratch($event)"/>
+			</span>
+		</div>
+		<ul class="list">
+			<!-- Secret Post -->
+			<li class="item" style="padding: 0">
+				<div class="post-content" style="background: url(img/secret-post.png);background-repeat: no-repeat; background-size: auto 340px; background-position: top; margin-top: 3px; position: relative; border-bottom: 1px solid #ddd;">
+					<div class="row" style="padding: 0px">
+						<div class="col col-50">
+							<img src="img/user-avatar01.png" style="width: 33px"/>
+						</div>
+					</div>
+					<div class="row text-center" style="padding: 0px; margin-top: 60px; font-weight: bold; font-size: 13px; ">
+						<div class="col col-10"></div>
+						<div class="col col-80">
+							<h4 style="text-align: left;">"I never thought it would be in such a young age...damm<br/> I was almost a baby lol"</h4>
+						</div>
+						<div class="col col-10"></div>
+					</div>
+					<div class="row text-center" style="margin-top: 160px;">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<div style="width: 64px; background-color: white; padding: 11px; border-radius: 50px; margin-left: auto; margin-right: auto; opacity: 0.7;">
+								<img src="img/lip.png" style="width: 40px">
+							</div>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row text-center" style="margin-top: -25px; padding-bottom: 0;position: relative;">
+						<div class="col col-33 text-left" style="margin-top: -10px">
+							<span style="background-color: #252525; color: white; font-weight: bold; border-radius: 5px; font-size: 11px; padding:2px 20px 5px 20px">evening</span>
+						</div>
+						<div class="col col-33">
+							<span style="font-weight: bold; font-size: 12px">252</span>
+						</div>
+						<div class="col col-33" style="margin-top: -10px">
+							<i class="icon ion-location" style="color: #ff2514;"></i>
+							<span style="font-size: 11px">New york, Broadway</span>
+						</div>
+					</div>
+				</div>
+				<div class="post-comment" style="padding: 5px;">
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center" style="border-bottom: 1px solid #b0b0b0">
+							<i class="icon ion-ios-chatbubble" style="font-size: 25px; color: #cbcbcb"></i>
+							<span style="font-size: 12px; color: #cbcbcb">your Comment</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-weight: bold;">MrinaBlumberg</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<p style="white-space: normal; text-align: left; color: #676767; font-weight: bold">Lorem ipsum dolor sit amet, vis quod nonumes rationibus te Utamur tibique epicuri eam ei. Usu vitae graeci conslusionemque eu. Que errem aeterno saperet te, falli veritus <strong style="color: black">read more</strong>
+						</p>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<i class="icon ion-ios-people" style="font-size: 22px; margin-right: 10px"></i><span style="font-weight: bold; color: #868686">173 comments</span>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<p style="font-weight: bold; color: #868686"><strong style="color: black">BillyBoy</strong> so pretty and I like the bench...</p>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-size: 12px; text-decoration: underline; font-weight: bold;">View all comments</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+				</div>
+			</li>
+			<!-- Suga Post -->
+			<li class="item" style="padding: 0">
+				<div class="post-content" style="background: url(img/sugachic-post.png);background-repeat: no-repeat; background-size: 100% 290px; margin-top: 3px; position: relative; background-position-y: 60px;border-bottom: 1px solid #ddd;">
+					<div class="row" style="padding: 0px">
+						<div class="col col-10">
+							<img src="img/user-avatar01.png" width="50px" style=""/>
+						</div>
+						<div class="col col-90 text-center" style="font-weight: bold; font-size: 14px;">
+							<div>Mrina Blumberg</div>
+							<div style="background-color: #88be48; display: inline-block; padding: 2px 45px 2px 5px; color: white; border-radius: 6px;">
+								<img src="img/gift-piece.png" style="width: 30px; vertical-align: top" />&nbsp;&nbsp;Gift a Piece to Marina
+							</div>
+						</div>
+					</div>
+					<div class="row text-center" style="margin-top: 256px;">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<div style="width: 64px; background-color: white; padding: 11px; border-radius: 50px; margin-left: auto; margin-right: auto; opacity: 0.7;">
+								<img src="img/lip.png" style="width: 40px">
+							</div>
+						</div>
+						<div class="col col-33" ng-click="openPostPurchase()"></div>
+					</div>
+					<div class="row text-center" style="margin-top: -25px; padding-bottom: 0;position: relative;">
+						<div class="col col-33 text-left" style="margin-top: -10px">
+							<span style="background-color: #252525; color: white; font-weight: bold; border-radius: 5px; font-size: 11px; padding:2px 20px 5px 20px">evening</span>
+						</div>
+						<div class="col col-33">
+							<span style="font-weight: bold; font-size: 12px">252</span>
+						</div>
+						<div class="col col-33" style="margin-top: -10px">
+							<i class="icon ion-location" style="color: #ff2514;"></i>
+							<span style="font-size: 11px">New york, Broadway</span>
+						</div>
+					</div>
+				</div>
+				<div class="post-owners text-center" style="background: url(img/pic-owners.png) no-repeat; background-size: 100%;  height: 135px; background-position-y: 20px; margin: -1px;padding: 0px; border:1px solid #ddd;">
+					<div class="row" style="padding: 0px">
+						<div class="col" style="color: #7e7147; font-weight: bold;">Pic Owners</div>
+					</div>
+				</div>
+				<div class="post-comment" style="padding: 5px;">
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center" style="border-bottom: 1px solid #b0b0b0">
+							<i class="icon ion-ios-chatbubble" style="font-size: 25px; color: #cbcbcb"></i>
+							<span style="font-size: 12px; color: #cbcbcb">your Comment</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-weight: bold;">MrinaBlumberg</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<p style="white-space: normal; text-align: left; color: #676767; font-weight: bold">Lorem ipsum dolor sit amet, vis quod nonumes rationibus te Utamur tibique epicuri eam ei. Usu vitae graeci conslusionemque eu. Que errem aeterno saperet te, falli veritus <strong style="color: black">read more</strong>
+						</p>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<i class="icon ion-ios-people" style="font-size: 22px; margin-right: 10px"></i><span style="font-weight: bold; color: #868686">173 comments</span>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<p style="font-weight: bold; color: #868686"><strong style="color: black">BillyBoy</strong> so pretty and I like the bench...</p>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-size: 12px; text-decoration: underline; font-weight: bold;">View all comments</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+				</div>
+			</li>
+			<!-- Pic Post -->
+			<li class="item" style="padding: 0">
+				<div class="post-content" style="background: url(img/image01.png);background-repeat: no-repeat; background-size: auto 318px; margin-top: 3px; position: relative; border-bottom: 1px solid #ddd;">
+					<div class="row" style="padding: 0px">
+						<div class="col col-50">
+							<img src="img/user-avatar01.png" width="50px" style=""/>
+						</div>
+						<div class="col col-50 text-right">
+							<div style="font-weight: bold; background-color: white; display: inline-block; padding: 1px 20px; border-radius: 10px; font-size: 13px; opacity: 0.8;">MrinaBlumberg</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col" style="position: absolute; bottom: 66px; text-align: right;">
+							<div style="font-weight: bold; color: white; background-color: #0b0a0d; display: inline-block; font-size: 11px; padding: 1px 5px; margin-right: 5px; border-radius: 3px;">What I want is what I Need</div>
+						</div>
+					</div>
+					<div class="row text-center" style="margin-top: 225px;">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<div style="width: 64px; background-color: white; padding: 11px; border-radius: 50px; margin-left: auto; margin-right: auto; opacity: 0.7;">
+								<img src="img/lip.png" style="width: 40px">
+							</div>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row text-center" style="margin-top: -25px; padding-bottom: 0;position: relative;">
+						<div class="col col-33 text-left" style="margin-top: -10px">
+							<span style="background-color: #252525; color: white; font-weight: bold; border-radius: 5px; font-size: 11px; padding:2px 20px 5px 20px">evening</span>
+						</div>
+						<div class="col col-33">
+							<span style="font-weight: bold; font-size: 12px">252</span>
+						</div>
+						<div class="col col-33" style="margin-top: -10px">
+							<i class="icon ion-location" style="color: #ff2514;"></i>
+							<span style="font-size: 11px">New york, Broadway</span>
+						</div>
+					</div>
+				</div>
+				<div class="post-comment" style="padding: 5px;">
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center" style="border-bottom: 1px solid #b0b0b0">
+							<i class="icon ion-ios-chatbubble" style="font-size: 25px; color: #cbcbcb"></i>
+							<span style="font-size: 12px; color: #cbcbcb">your Comment</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-weight: bold;">MrinaBlumberg</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<p style="white-space: normal; text-align: left; color: #676767; font-weight: bold">Lorem ipsum dolor sit amet, vis quod nonumes rationibus te Utamur tibique epicuri eam ei. Usu vitae graeci conslusionemque eu. Que errem aeterno saperet te, falli veritus <strong style="color: black">read more</strong>
+						</p>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<i class="icon ion-ios-people" style="font-size: 22px; margin-right: 10px"></i><span style="font-weight: bold; color: #868686">173 comments</span>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<p style="font-weight: bold; color: #868686"><strong style="color: black">BillyBoy</strong> so pretty and I like the bench...</p>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-size: 12px; text-decoration: underline; font-weight: bold;">View all comments</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+				</div>
+			</li>
+			<!-- Feature Post -->
+			<li class="item" style="padding: 0">
+				<div class="post-content" style="padding: 0px; background: url(img/image01.png);background-repeat: no-repeat; background-size: auto 318px; background-position-y: 60px;border-bottom: 1px solid #ddd;">
+					<div class="row" style="padding: 0px">
+						<div class="col">
+							<img src="img/user-avatar01.png" width="50px" style=""/>
+						</div>
+						<div class="col text-center">
+							<div style="font-weight: bold;">MrinaBlumberg</div>
+							<div style="margin-top: 3px;">
+								<span class="featuring-btn">Featuring</span>
+								<span style="font-weight: bold;font-size:14px;color:#1668a7;">sara_underwood</span>
+							</div>
+						</div>
+						<div class="col">
+						</div>
+					</div>
+					<div class="row text-center" style="margin-top: 280px;">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<div style="width: 80px; background-color: white;padding: 10px; border-radius: 50px; margin-left: auto; margin-right: auto; opacity: 0.7">
+								<img src="img/lip.png" style="width: 60px">
+							</div>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row text-center" style="margin-top: -25px; padding-bottom: 0;position: relative;">
+						<div class="col col-33 text-left" style="margin-top: -10px">
+							<span style="background-color: #252525; color: white; font-weight: bold; border-radius: 5px; font-size: 11px; padding:2px 20px 5px 20px">evening</span>
+						</div>
+						<div class="col col-33">
+							<span style="font-weight: bold; font-size: 12px">252</span>
+						</div>
+						<div class="col col-33" style="margin-top: -10px">
+							<i class="icon ion-location" style="color: #ff2514;"></i>
+							<span style="font-size: 11px">New york, Broadway</span>
+						</div>
+					</div>
+				</div>
+				<div class="post-comment" style="padding: 5px;">
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center" style="border-bottom: 1px solid #b0b0b0">
+							<i class="icon ion-ios-chatbubble" style="font-size: 25px; color: #cbcbcb"></i>
+							<span style="font-size: 12px; color: #cbcbcb">your Comment</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-weight: bold;">sara_underwood</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+					<div class="row">
+						<p style="white-space: normal; text-align: left; color: #676767; font-weight: bold">Lorem ipsum dolor sit amet, vis quod nonumes rationibus te Utamur tibique epicuri eam ei. Usu vitae graeci conslusionemque eu. Que errem aeterno saperet te, falli veritus <strong style="color: black">read more</strong>
+						</p>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<i class="icon ion-ios-people" style="font-size: 22px; margin-right: 10px"></i><span style="font-weight: bold; color: #868686">173 comments</span>
+					</div>
+					<div class="row" style="margin-top: 5px">
+						<p style="font-weight: bold; color: #868686"><strong style="color: black">BillyBoy</strong> so pretty and I like the bench...</p>
+					</div>
+					<div class="row">
+						<div class="col col-33"></div>
+						<div class="col col-33 text-center">
+							<span style="font-size: 12px; text-decoration: underline; font-weight: bold;">View all comments</span>
+						</div>
+						<div class="col col-33"></div>
+					</div>
+				</div>
+			</li><!-- /Feature Post -->
+		</ul>
+	</ion-content>
+</ion-view>

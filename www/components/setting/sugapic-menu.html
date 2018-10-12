@@ -1,0 +1,36 @@
+<ion-view>
+  	<ion-nav-title>
+    	<h1 class="title">
+      		<span>sugapic menu</span>
+    	</h1>
+  	</ion-nav-title>
+  	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px" />
+		</button>
+  	</ion-nav-buttons>
+	<ion-content>
+		<ion-list>
+			<ion-item class="text-center">
+				<div><strong>Apply</strong> for partnership</div>
+				<div style="font-size: 12px">(need to have at least 500 <strong>followers</strong>)</div>
+				<button class="button" style="background-color: #cdce89; width: 60%; min-height: 37px; height: 30px;
+    			line-height: 0px; border-radius: 20px; color: white; font-weight: bold; box-shadow: #b8b8b8 2px 0px 1px 1px;">Apply</button>
+			</ion-item>
+			<ion-toggle ng-checked="true" style="font-size: 13px;">v.i.pics</ion-toggle>
+			<ion-toggle ng-checked="true" style="font-size: 13px;">new followers</ion-toggle>
+			<ion-item class="row">
+				<div class="col col-60" style="padding-left: 12px">
+					<p style="font-size: 13px; color: inherit;">number of pieces to sale in a pic</p>
+				</div>
+				<div class="col col-40 text-center">
+				<span style="background-color: #dadada; padding: 5px 10px 5px 10px; border-radius: 7px; color: white;">2</span>
+				<span style="background-color: #9cce89; padding: 5px 10px 5px 10px; border-radius: 7px; color: white;">4</span>
+				<span style="background-color: #71b2db; padding: 5px 10px 5px 10px; border-radius: 7px; color: white;">9</span>
+				<span style="background-color: #f66262; padding: 5px 10px 5px 10px; border-radius: 7px; color: white;">12</span>
+				</div>
+			</ion-item>
+			<ion-toggle ng-checked="true" style="font-size: 13px;">whole pic sale</ion-toggle>
+		</ion-list>
+	</ion-content>
+</ion-view>

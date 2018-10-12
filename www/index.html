@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Sugachic</title>
+		<!-- favicon -->
+		<link rel="shortchut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/home-logo.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-close-popup.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="components/auth/sign-in.controller.js"></script>
+    <script src="components/auth/sign-up.controller.js"></script>
+    <script src="components/home/home.controller.js"></script>
+    <script src="components/home/post-detail.controller.js"></script>
+    <script src="components/chat/my-chats.controller.js"></script>
+    <script src="components/chat/chat.controller.js"></script>
+    <script src="components/upload/upload.controller.js"></script>
+    <script src="components/notify/notify.controller.js"></script>
+    <script src="components/profile/profile.controller.js"></script>
+    <script src="components/profile/top-purchasers.controller.js"></script>
+    <script src="components/upload/pic-upload.controller.js"></script>
+    <script src="components/upload/pic-publish.controller.js"></script>
+    <script src="components/upload/sugapic-upload.controller.js"></script>
+    <script src="components/upload/sugapic-custom.controller.js"></script>
+    <script src="components/upload/sugapic-publish.controller.js"></script>
+    <script src="components/upload/secret.controller.js"></script>
+    <script src="components/setting/setting.controller.js"></script>
+    <script src="components/setting/notification-menu.controller.js"></script>
+    <script src="components/setting/sugapic-menu.controller.js"></script>
+    <script src="components/setting/secret-menu.controller.js"></script>
+    <script src="components/setting/mywallet-menu.controller.js"></script>
+    <script src="components/setting/myaccount-menu.controller.js"></script>
+    <script src="components/setting/feature-menu.controller.js"></script>
+    <script src="components/feature/savedfeatures.controller.js"></script>
+    <script src="components/search/search.controller.js"></script>
+  </head>
+  <body ng-app="sugachicApp">
+    <ion-side-menus>
+      <ion-side-menu-content ng-controller="NavCtrl">
+        <ion-nav-bar class="bar-light"></ion-nav-bar>
+        <ion-nav-view animation=="slide-left-right"></ion-nav-view>
+      </ion-side-menu-content>
+    </ion-side-menus>
+  </body>
+</html>

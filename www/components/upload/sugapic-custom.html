@@ -1,0 +1,60 @@
+<ion-view class="sugacustom-page">
+  <ion-nav-title>
+    <h1 class="title">
+      <img class="title-image" />
+    </h1>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+  	<button class="button button-clear" ng-click="goBack()">
+      <img src="img/left-btn.png" style="width: 30px" />
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+  	<button class="button button-dark btn-next" ng-click="onClickNext()">Next</button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="row" style="padding: 0px">
+      <div class="col" style="padding: 0px">
+        <img src="img/puzzle-image.png" style="width: 100%; height: 100%" />
+      </div>
+    </div>
+    <div class="row" style="border-bottom: 1px solid #efefef">
+      <div class="col" style="font-size: 12px">
+        *click to on the picture choose your <strong>V</strong> <strong style="font-style: italic;">.i.pieces</strong>&nbsp;<i class="icon ion-ios-information-outline"></i>
+      </div>
+    </div>
+    <div class="row text-right" style="margin-top: 5px; margin-bottom: -15px;">
+      <div class="col" style="margin-right: 25px">
+        <span class="js-input" style="font-size: 22px">{{user.value}}</span>
+        <img src="img/coins.png" />
+      </div>
+    </div>
+    <div class="row text-right">
+			<!-- <div class="col col-75 text-center">
+        <div style="margin-top: 35px;">
+          <img src="img/overall-price.png" style="width: 100%; height: 100%" />
+        </div>
+        <div style="margin-top: 35px; font-size: 10px;">
+          *its best you choose an amount based on your fans habits
+        </div>
+      </div> -->
+      <div class="col col-67">
+        <p class="text-center" style="font-family: 'Berlin Sans FB Demi'; font-size: 30px; font-weight:bold; color: #3d3d3d;">Choose Your Pic</p>
+        <div class="text-center" style="margin-top: 20px;">
+          <p style="font-family: 'Amatica SC'; font-size: 30px; font-weight: bold;display: inline-block;">OVERALL</p>
+          <p style="font-family: 'AR BERKLEY'; font-size: 50px; color: #c9a021;display: inline-block;">Price</p>
+        </div>
+        <div class="text-center" style="margin-top: 50px; font-size: 9px;">
+          *its best you choose an amount based on your fans habits
+        </div>
+      </div>
+      <div class="col col-33" style="margin-top: 35px; margin-left: 30px">
+        <div class="range">
+          <div style="height: 75px; background-color: #252525; width: 5px; margin-right: -3px;"></div>
+          <input type="range" name="amount" min="0" max="{{user.max}}" value="{{user.value}}" step="1" ng-model="user.value">
+          <div style="height: 75px; background-color: #252525; width: 5px; margin-left: -3px;"></div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

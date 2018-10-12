@@ -1,0 +1,127 @@
+<ion-view title="Search">
+  <ion-nav-title>
+    <h1 class="title">
+      <img class="title-image" />
+    </h1>
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+		<img src="img/search.png" class="show-search"/>
+		<img src="img/menu.png" class="show-menu" ng-click="openSetting()"/>
+  </ion-nav-buttons>
+  <div class="bar bar-subheader" style="height: auto; display: block;">
+		<div class="row" style="border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; padding: 0px">
+			<div class="col col-75">
+				<input type="text" placeholder="search..." ng-model="query" ng-keyup="searchUser()" style="width: 100%" />
+			</div>
+			<div class="col col-25">
+				<button class="button" style="background-color: #2a2a2a; color: white; width: 100%; font-size: 12px; min-height: 30px; line-height: 0px;" ng-click="onClickAdvanced()">Advanced</button>
+			</div>
+		</div>
+		<div class="row text-center" style="height: 100px" ng-if="showAdvanced == true">
+			<div class="col col-33" ng-click="setOrder('fans')" style="background: url(img/by-fans.png) no-repeat; background-size: auto 55px; background-position: center; opacity: {{order=='fans' ? .5 : 1;}}">
+			</div>
+			<div class="col col-33" ng-click="setOrder('networth')" style="background: url(img/by-networth.png) no-repeat; background-size: auto 55px; background-position: center; opacity: {{order=='networth' ? .5 : 1;}}">
+			</div>
+			<div class="col col-33" ng-click="setOrder('donations')" style="background: url(img/by-donations.png) no-repeat; background-size: auto 55px; background-position: center; opacity: {{order=='donations' ? .5 : 1;}}">
+			</div>
+		</div>
+		<div class="row text-center" ng-if="showAdvanced == true">
+			<div class="col">
+				<span ng-click="setFilter('near')" style="background-color: #2a2a2a; color: white; padding: 3px 10px 3px 10px; border-radius: 5px; font-size: 9px; opacity: {{filter=='near' ? .5 : 1;}}">near you</span>
+				<span ng-click="setFilter('trending')" style="background-color: #2a2a2a; color: white; padding: 3px 10px 3px 10px; border-radius: 5px; font-size: 9px; opacity: {{filter=='trending' ? .5 : 1;}}">trending categories</span>
+				<span ng-click="setFilter('fans')" style="background-color: #2a2a2a; color: white; padding: 3px 10px 3px 10px; border-radius: 5px; font-size: 9px; opacity: {{filter=='fans' ? .5 : 1;}}">my fans</span>
+				<span ng-click="setFilter('follows')" style="background-color: #2a2a2a; color: white; padding: 3px 10px 3px 10px; border-radius: 5px; font-size: 9px; opacity: {{filter=='follows' ? .5 : 1;}}">my follows</span>
+			</div>
+		</div>
+  </div>
+	<ion-content class="has-subheader" ng-class="showAdvanced ? 'show-search-advanced' : 'hidden-search-advanced'">
+		<div class="row" ng-if="users.length > 0">
+			<div class="search-view">
+				<div class="row" style="padding: 0" ng-repeat="(index, item) in users">
+					<div class="col col-20">
+						<span class="user_pic">
+							<img src="img/girl01.png" width="100%">
+						</span>
+					</div>
+					<div class="col col-60">
+						<p class="user_name_text">{{item.username}}</p>
+						<span><img src="img/location_icon.png" width="13px">
+							<span class="user_location_text">london, uk</span>
+							<span class="user_fans_text">{{item.fans}} Fans</span>
+						</span>
+					</div>
+					<div class="col col-20">
+						<img src="img/feature_icon.png" style="margin-top: 10px; width: 35px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="padding: 0px; margin-top: 10px">
+			<div class="col col-50">
+				<div class="row" style="padding: 0px; margin-bottom: 20px">
+					<div class="col" style="background: url(img/image01.png) no-repeat;background-size: 100% 150px; height: 150px; position: relative;">
+						<div style="background-color: #d3b642; display: inline-block; float: right; margin-top: -15px; margin-right: 10px; font-size: 11px; color: white; padding: 0px 5px 0px 5px;border-radius: 5px;">Bettigussd</div>
+						<div style="font-size: 10px; background-color: white; opacity: 0.8; border-radius: 5px;  padding: 5px; position: absolute; bottom: 10px; width: 90%; word-break: break-all;">lorem iposum lorem iposum lorem iposum lorem iposum lorem...</div>
+					</div>
+				</div>
+				<div class="row" style="padding: 0px; margin-bottom: 15px">
+					<div class="col" style="background: url(img/image01.png) no-repeat;background-size: 100% 150px; height: 150px; position: relative;">
+						<div style="background-color: #3f3f3f; display: inline-block; float: right; margin-top: -15px; margin-right: 10px; font-size: 11px; color: white; padding: 0px 5px 0px 5px;border-radius: 5px;">MarinaBlum</div>
+						<div style="font-size: 10px; background-color: white; opacity: 0.8; border-radius: 5px;  padding: 5px; position: absolute; bottom: 10px; width: 90%; word-break: break-all;">lorem iposum lorem iposum lorem iposum lorem iposum lorem...
+						</div>
+    			</div>
+				</div>
+				<div class="row text-center" style="padding: 0px">
+					<div class="col" style="padding: 0px">
+						<button class="button truncate_1" style="height: 100%; width: 100%; color: white; background-color: #1f1f1f">Promotion Ad</button>
+					</div>
+				</div>
+			</div>
+			<div class="col col-50">
+				<div class="row" style="padding: 0px; margin-bottom: 20px">
+					<div class="col" style="background: url(img/image01.png) no-repeat;background-size: 100% 200px; height: 200px; position: relative;">
+					<div style="background-color: #3c4faf; display: inline-block; float: right; margin-top: -15px; margin-right: 10px; font-size: 11px; color: white; padding: 0px 5px 0px 5px;border-radius: 5px;">NoiNagad</div>
+					<div style="font-size: 10px; background-color: white; opacity: 0.8; border-radius: 5px;  padding: 5px; position: absolute; bottom: 10px; width: 90%; word-break: break-all;">lorem iposum lorem iposum lorem iposum lorem iposum lorem...</div>
+
+    			</div>
+				</div>
+				<div class="row" style="padding: 0px">
+					<div class="col" style="background: url(img/image01.png) no-repeat;background-size: 100% 155px;  height: 155px; position: relative;">
+					<div style="background-color: #d43342; display: inline-block; float: right; margin-top: -15px; margin-right: 10px; font-size: 11px; color: white; padding: 0px 5px 0px 5px;border-radius: 5px;">JeffMichaels</div>
+					<div style="font-size: 10px; background-color: white; opacity: 0.8; border-radius: 5px;  padding: 5px; position: absolute; bottom: 10px; width: 90%; word-break: break-all;">lorem iposum lorem iposum lorem iposum lorem iposum lorem...</div>
+
+    			</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 0" ng-repeat="(row_index, row_data) in popular_posts">
+			<div ng-repeat="(col_index, col_data) in row_data" class="col col-25" style="position: relative; overflow: hidden;">
+				<img src="img/image01.png" style="width: 100%;">
+				<div class="search_post_des truncate_1">{{col_data.description}}</div>
+			</div>
+			<!-- <div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div> -->
+		</div>
+		<!-- <div class="row" style="margin-top: 2px">
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+			<div class="col col-25" style="background: url(img/image01.png) no-repeat; background-size: cover; height: 100px; position: relative;">
+				<div style="background-color: white; opacity: 0.8; position: absolute; bottom: 5px; width: 90%; word-break: break-all; height: 20px; font-size: 10px; padding: 1px 3px 1px 3px; border-radius: 8px;">iorem iposum...</div>
+			</div>
+		</div> -->
+	</ion-content>
+</ion-view>

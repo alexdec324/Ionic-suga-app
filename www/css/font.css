@@ -1,0 +1,31 @@
+/* font */
+@font-face {
+	font-family: 'AR BERKLEY';
+	src: url('fonts/ARBERKLEY.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Aharoni';
+	src: url('fonts/ahronbd.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Bauhaus 93';
+	src: url('fonts/BAUHS93.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Berlin Sans FB Demi';
+	src: url('fonts/BRLNSDB.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Amatica SC';
+	src: url('fonts/AmaticaSC-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}

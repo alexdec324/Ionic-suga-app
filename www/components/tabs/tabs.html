@@ -1,0 +1,26 @@
+<ion-tabs class="tab-icon-top tabs-light">
+	<ion-tab title="Home" icon="ion-home" href="#/tab/home" on-select="selectTab(0)">
+		<ion-nav-view name="home-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Chat" icon="ion-ios-people" href="#/tab/mychat" ng-click="selectTab(1)">
+		<ion-nav-view name="chat-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Upload" icon="ion-camera" href="#/tab/upload" on-select="selectTab(2)">
+		<ion-nav-view name="upload-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Notification" icon="ion-android-notifications" href="#/tab/notify" on-select="selectTab(3)">
+		<ion-nav-view name="notify-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Profile" icon="ion-person" href="#/tab/profile" on-select="selectTab(4)">
+		<ion-nav-view name="profile-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Setting" icon="ion-gear-a" href="#/tab/setting" hidden="true">
+		<ion-nav-view name="setting-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Feature" icon="ion-ios-stopwatch" href="#/tab/features" hidden="true">
+		<ion-nav-view name="feature-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="Search" icon="ion-search" href="#/tab/search" hidden="true">
+		<ion-nav-view name="search-tab"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>

@@ -1,0 +1,76 @@
+<div>
+	<div class="row text-center" style="border-bottom: 1px solid #dfdfdf; padding-bottom: 0;">
+		<div class="col col-60">
+			<div style="margin: 5px;font-size: 16px; opacity: .7;">choose post to <span class="feature-lbl">Feature</span> <span style="font-size: 12px;">at</span></div>
+			<div style="width:100%;border-radius:5px;font-size: 14px;color:white; background: #2a2a2a;
+    padding: 3px;">MarinaBlumberg</div>
+		</div>
+		<div class="col col-40" style="padding: 0;">
+			<img src="img/user-avatar01.png" style="width: 70px;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" style="padding: 10px 10px 0;">
+			<span style="font-size: 12px;color:#51531f;">your recent post: <span style="color:#2a2a2a;font-weight:bold;">{{date | date:'d/M/yyyy'}}</span></span>
+		</div>
+	</div>
+	<ion-scroll direction="y" class="post-content">
+		<div class="row text-center ">
+			<div class="col" style="position: relative;">
+				<img src="img/image01.png" class="recent-post-img" />
+				<span class="recent-post-brief">“going to a photo shoot with the greatest photo grapher ever.....”</span>
+			</div>
+		</div>
+		<ul class="post-list">
+			<li class="post-item" id="1" post-choose>
+				<h4 class="post-date">22/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="2" post-choose>
+				<h4 class="post-date">17/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="3" post-choose>
+				<h4 class="post-date">10/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="4" post-choose>
+				<h4 class="post-date">5/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="5" post-choose>
+				<h4 class="post-date">22/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="6" post-choose>
+				<h4 class="post-date">17/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="7" post-choose>
+				<h4 class="post-date">10/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+			<li class="post-item" id="8" post-choose>
+				<h4 class="post-date">5/11/2017</h4>
+				<img src="img/girl01.png" class="post-img" />
+				<span class="post-brief">“lorem iposum lorem iposum..”</span>
+			</li>
+		</ul>
+	</ion-scroll>
+	<div class="row" style="margin-top: 10px;">
+		<div class="col">
+			<button class="button feature-now-btn" ng-click="onFeatureNow()">Feature now!</button>
+		</div>
+		<div class="col-offset-10"></div>
+		<div class="col">
+			<button class="button save-later-btn" ng-click="saveFeatureLater()">Save for later</button>
+		</div>
+	</div>
+</div>

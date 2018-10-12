@@ -1,0 +1,67 @@
+<ion-view>
+  	<ion-nav-title>
+    	<h1 class="title">
+      		<span><strong>my account</strong> menu</span>
+    	</h1>
+  	</ion-nav-title>
+  	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px" />
+		</button>
+  	</ion-nav-buttons>
+	<ion-content>
+		<div class="row">
+			<div class="col col-67 text-center">
+				<div style="margin-bottom: 10px; font-size: 12px">choose profile pic shape</div>
+				<ion-slide-box show-pager="" on-slide-changed="slideHasChanged($index)">
+				  <ion-slide>
+				    <div class="box blue"><img src="img/slide01.png" style="width: 80px" /></div>
+				  </ion-slide>
+				  <ion-slide>
+				    <div class="box yellow"><img src="img/slide02.png" style="width: 80px" /></div>
+				  </ion-slide>
+				  <ion-slide>
+				    <div class="box pink"><img src="img/slide03.png" style="width: 80px" /></div>
+				  </ion-slide>
+				</ion-slide-box>
+			</div>
+			<div class="col col-33" style="background: url(img/user-avatar01.png) no-repeat; background-size: contain;">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-right">
+				<button class="button button-positive" style="background-color: #5896bd; line-height: 0px; height: 28px; min-height: 22px; padding: 1px 30px 1px 30px; font-size: 10px; font-weight: bold;">edit profile pic</button>
+			</div>
+		</div>
+		<ion-list>
+			<ion-item style="border-bottom-style: none; font-size: 12px; padding: 10px;">
+				<div><span style="color: #9e9e9e">email</span> <span style="color: #7caf5a">(private)</span></div>
+				<div>myemail@gmail.com</div>
+			</ion-item>
+			<ion-item style="border-style: none; font-size: 12px; padding: 10px;">
+				<div><span style="color: #9e9e9e">phone</span> <span style="color: #7caf5a"> (private)</span></div>
+				<div>+97546589487</div>
+			</ion-item>
+			<ion-item style="border-style: none; font-size: 12px; padding: 10px;">
+				<div><span style="color: #5896bd">name</span></div>
+				<div>RonelNagad</div>
+			</ion-item>
+			<ion-item style="border-top-style: none; font-size: 12px; padding: 10px;">
+				<div><span style="color: #5896bd">username</span></div>
+				<div>RonelNagad</div>
+			</ion-item>
+		    <ion-item class="item item-icon-right" style="font-size: 12px; padding: 10px;">
+		    	edit <strong>personal card</strong>
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		    <ion-item class="item item-icon-right" style="font-size: 12px; padding: 10px; font-weight: bold">
+		    	change password
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		    <ion-item class="item item-icon-right" style="font-size: 12px; padding: 10px; font-weight: bold" href="#/sign-in">
+		    	sign out
+		    	<i class="icon ion-chevron-right icon-accessory"></i>
+		    </ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

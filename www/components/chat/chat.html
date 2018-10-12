@@ -1,0 +1,70 @@
+<ion-view title="">
+	<ion-nav-buttons side="left">
+		<button class="button button-clear" ng-click="goBack()">
+			<img src="img/left-btn.png" style="width: 30px; margin-right: 5px" />
+			username
+		</button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<img src="img/user-avatar01.png" class="chat_user_pic" ng-click=""/>
+	</ion-nav-buttons>
+	
+	<ion-content class="has-subheader" style="top: 44px">
+		<div class="row text-center" style="margin-top: 100px;">
+			<div class="col">today 10:45</div>
+		</div>
+		<div ng-repeat="msg in all_msgs" class="row" ng-class="{'text-right':msg.sender_id == user_id}">
+			<div class="col" ng-if="msg.sender_id==pair_id">
+				<div><img src="img/user-avatar01.png" style="width: 50px" /></div>
+				<div style="display: inline-block; background-color: #f0365d; color: #fff; border-radius: 12px; padding: 3px 15px;">
+					{{msg.message}}
+				</div>
+			</div>
+			<div class="col" ng-if="msg.sender_id==user_id">
+				<div style="display: inline-block; background-color: #4788b5; color: #fff; border-radius: 12px; padding: 3px 15px; color: white">{{msg.message}}</div>
+			</div>
+		</div>
+		<!-- <div class="row text-right">
+			<div class="col">
+				<div style="display: inline-block; background-color: #cca456; border-radius: 12px; padding: 5px; color: white">hey wassup with you</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div><img src="img/user-avatar01.png" style="width: 50px" /></div>
+				<div style="display: inline-block; background-color: #efefef; border-radius: 12px; padding: 5px;">good where are you</div>
+			</div>
+		</div> -->
+	</ion-content>
+	<div class="bar bar-footer" style="bottom: 0px;" ng-class="{'chat-bar':chattingWith}">
+		<img src="img/lip.png" style="width: 45px" />
+		<input type="text" ng-model="sender_message" placeholder="write here whatever..." style="width: 100%; border: 1px solid #c2c2c2; border-radius: 15px 15px; margin-left: 5px; padding: 5px; background-color: #efefef" />
+		<button class="button button-clear pull-right" ng-click="set_chattingWith()" style="padding-top: 3px; padding-right: 6px">
+	    	<img src="img/plus_icon.png" class="pull-right" style="width: 22px" />
+		</button>
+	</div>
+	<div ng-if="chattingWith" class="bar" style=" height: 75px; padding: 0; bottom: 0">
+		<div class="row text-center" style="padding: 0">
+			<div class="col col-10 text-right">
+				<img src="img/arrow_up_icon.png" style="width: 20px; height: 30px; margin-top: 10px" ng-click="remove_chattingWith()">
+			</div>
+			<div class="col">
+				<img src="img/upload_icon.png" style="width: 45px;" ng-click="view_fileDialog()"/>
+				<input type="file" id='file' file-model="myFile" style="display: none;" />
+				<div class="chatting_with_text">Upload</div>
+			</div>
+			<div class="col">
+				<img src="img/camera_icon.png" style="width: 45px;" />
+				<div class="chatting_with_text">Camera</div>
+			</div>
+			<div class="col" ng-click="openPrivatePicModal()">
+				<img src="img/private_pic_icon.png" style="width: 45px;" />
+				<div class="chatting_with_text">Private Pic</div>
+			</div>
+			<div class="col">
+				<img src="img/mutual_feature_icon.png" style="width: 45px;" />
+				<div class="chatting_with_text">Mutual Feature</div>
+			</div>
+		</div>
+	</div>
+</ion-view>

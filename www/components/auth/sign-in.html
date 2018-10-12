@@ -1,0 +1,48 @@
+<ion-view view-title="Sign-In" hide-nav-bar="true">
+  <ion-content style="background-color: #eb1605">
+    <div class="row text-center">
+      <div class="col text-center">
+        <div style="background: url(img/sign-banner.png) no-repeat; background-size: auto 250px; height: 250px; background-position: center; margin-top: 44px;"></div>
+      </div>
+    </div>
+    <div class="row text-center" style="padding-left: 25px; padding-right: 25px;">
+      <div class="col">
+        <input type="text" placeholder="Phone number, Email or username" style="width: 100%; border-radius: 5px;
+    padding: 10px; box-shadow: inset grey 1px 1px 1px 0px; font-size: 11px" />
+      </div>
+    </div>
+    <div class="row text-center" style="padding-left: 25px; padding-right: 25px;">
+      <div class="col">
+        <input type="text" placeholder="Password" style="width: 100%; border-radius: 5px;
+    padding: 10px; box-shadow: inset grey 1px 1px 1px 0px; font-size: 11px" />
+      </div>
+    </div>
+    <div class="row text-center" style="padding-left: 25px; padding-right: 25px;">
+      <div class="col">
+        <button class="button" style="width: 100%; border-radius: 5px;background-color: #ff6b00; color: white;
+    font-weight: bold; height: 7px; min-height: 35px;" ng-click="signIn()">
+					<img src="img/login-img.png" style="height: 20px" />
+				</button>
+      </div>
+    </div>
+    <div class="row text-center" style="padding-left: 25px; padding-right: 25px;">
+      <div class="col" style="color: white; text-decoration: underline; font-weight: bold; font-size: 11px; margin-bottom: 10px">forgot your password? click here</div>
+    </div>
+    <div class="row text-center" style="padding-left: 25px; padding-right: 25px;">
+      <div class="col" style=""><span style="font-size: 12px; vertical-align: middle;">New To&nbsp;&nbsp;</span><img src="img/sugachic-mark.png" style="height: 21px; vertical-align: middle;" /></div>
+    </div>
+    <div class="row text-center" style="padding: 0px;">
+      <div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px;    background-color: #fc9289;" /></div>
+      <div class="col col-20" style="font-size: 11px; line-height: 15px;">sign up with</div>
+      <div class="col" style="padding-left: 0px; padding-right: 0px"><hr style="border: none; height: 1px;    background-color: #fc9289;" /></div>
+    </div>
+    <div class="row text-center" style="margin-top: 5px; margin-bottom: 5px;">
+      <div class="col"><img src="img/facebook-logo.png" style="height: 40px" /></div>
+      <div class="col"><img src="img/google-logo.png" style="height: 35px" /></div>
+      <div class="col"><img src="img/twitter-logo.png" style="height: 35px" /></div>
+    </div>
+    <ion-item class="text-center" style="background-color: transparent; border-bottom-style: none;">
+      <span style="color: white; font-size: 12px">or sign up with your Email, Phone.</span>&nbsp;&nbsp;<span><i class="icon ion-arrow-right-a" style="color: black; font-size: 22px; vertical-align: middle" ng-click="goSignUp()"></i></span>
+    </ion-item>
+  </ion-content>
+</ion-view>
